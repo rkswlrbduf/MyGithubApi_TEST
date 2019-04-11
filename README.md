@@ -3,9 +3,9 @@
 ### 깃허브 Repo 가져오기  
 
 #### 사용 라이브러리
-+ retrofit2
-+ rxjava2
-+ glide  
++ retrofit2 (<https://github.com/square/retrofit>)
++ rxjava2 (<https://github.com/ReactiveX/RxJava>)
++ glide (<https://github.com/bumptech/glide>)
 
 
 

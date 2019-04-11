@@ -7,4 +7,6 @@
 + rxjava2
 + glide  
 
+##### 소요시간 : 1시간 28분
+
 ![](TEST.gif)

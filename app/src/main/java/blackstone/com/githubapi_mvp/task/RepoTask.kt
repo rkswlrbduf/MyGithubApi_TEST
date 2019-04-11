@@ -13,7 +13,7 @@ class RepoTask {
     companion object {
         fun getRepo(callback: Callback<ArrayList<Repo>>, owner: String) {
 
-            NetworkUtils.getGithubApiInstance()
+            NetworkUtils.getGithubRepoApiInstance()
                 .getRepo(owner)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

@@ -10,51 +10,42 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="20dp">
 
         <TextView
-            android:id="@+id/mID"
-            android:layout_width="wrap_content"
+            android:id="@+id/mRepoName"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/mRepoDescription"
+            app:layout_constraintEnd_toStartOf="@+id/mStarCount"
             app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="102338403" />
+            tools:text="repo name" />
 
         <TextView
-            android:id="@+id/mName"
+            android:id="@+id/mRepoDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="20dp"
             android:ellipsize="end"
-            android:textColor="#232323"
-            android:textSize="22sp"
-            app:layout_constraintEnd_toStartOf="@+id/mDate"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mID"
-            tools:text="BackEnd" />
-
-        <TextView
-            android:id="@+id/mUrl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:textColor="#111111"
-            android:textSize="13sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mName"
-            tools:text="http://github.com/rkswlrbduf/backend" />
-
-        <TextView
-            android:id="@+id/mDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mStarCount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mRepoName"
+            tools:text="repo description" />
+
+        <TextView
+            android:id="@+id/mStarCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="2018/10/15" />
+            tools:text="star Count" />
 
     </android.support.constraint.ConstraintLayout>
 

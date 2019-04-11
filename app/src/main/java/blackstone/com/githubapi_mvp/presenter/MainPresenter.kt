@@ -3,6 +3,8 @@ package blackstone.com.githubapi_mvp.presenter
 import blackstone.com.githubapi_mvp.callback.Callback
 import blackstone.com.githubapi_mvp.data.Repo
 import blackstone.com.githubapi_mvp.task.RepoTask
+import java.util.*
+import kotlin.Comparator
 
 class MainPresenter : MainContract.Presenter {
 
@@ -20,6 +22,9 @@ class MainPresenter : MainContract.Presenter {
     override fun loadRepo() {
         RepoTask.getRepo(object: Callback<ArrayList<Repo>>() {
             override fun returnResult(any: ArrayList<Repo>) {
+                Collections.sort(any, object : Comparator<Repo> {
+                    override fun compare(d1: Repo, d2: Repo): Int = Integer.compare(Integer.parseInt(d2.starCount), Integer.parseInt(d1.starCount))
+                })
                 view.loadReposInList(any)
             }
 

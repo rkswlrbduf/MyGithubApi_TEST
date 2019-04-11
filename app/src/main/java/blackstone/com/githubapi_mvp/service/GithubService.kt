@@ -5,7 +5,7 @@ import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-interface RepoService {
+interface GithubService {
 
     @GET("users/{owner}/repos")
     fun getRepo(@Path("owner") owner: String) : Observable<ArrayList<Repo>>

@@ -2,7 +2,11 @@ package blackstone.com.githubapi_mvp.data
 
 import com.google.gson.annotations.SerializedName
 
-data class Repo(@SerializedName("name") val name: String,
-           @SerializedName("id") val id: String,
-           @SerializedName("created_at") val date: String,
-           @SerializedName("html_url") val url: String)
+class Repo {
+
+    @SerializedName("name") var name: String? = null
+    @SerializedName("description") var description: String? = null
+    @SerializedName("stargazers_count") var starCount: String? = null
+    @SerializedName("owner") var owner: Owner? = null
+
+}
